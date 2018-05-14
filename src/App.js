@@ -45,7 +45,7 @@ class App extends Component {
         streamInitiallyEnabled: streamEnabled,
         streamEnabled,
         proceedHelpMessage: streamEnabled 
-                              ? "The table's stream is already enabled so this will be a read-only operation." 
+                              ? "The table's stream is already enabled, so this will be a read-only operation." 
                               : "The table's stream will be enabled then disabled.",
         stage: 2
       });
@@ -81,7 +81,7 @@ class App extends Component {
       await this.setTaskStatus(1, "done");
 
       // 2. Enable table's DynamoDB Stream	
-      if (this.streamInitiallyEnabled) {
+      if (this.state.streamInitiallyEnabled) {
         await this.setTaskStatus(2, "skip");
       }
       else {
@@ -93,7 +93,7 @@ class App extends Component {
       }
 
       // 3. Wait for table to become active	
-      if (this.streamInitiallyEnabled) {
+      if (this.state.streamInitiallyEnabled) {
         await this.setTaskStatus(3, "skip");
       }
       else {
@@ -117,7 +117,7 @@ class App extends Component {
       await this.setTaskStatus(5, "done");
 
       // 6. Disable table's DynamoDB Stream	
-      if (this.streamInitiallyEnabled) {
+      if (this.state.streamInitiallyEnabled) {
         await this.setTaskStatus(6, "skip");
       }
       else {
@@ -129,7 +129,7 @@ class App extends Component {
       }
 
       // 7. Wait for table to become active
-      if (this.streamInitiallyEnabled) {
+      if (this.state.streamInitiallyEnabled) {
         await this.setTaskStatus(7, "skip");
       }
       else {
