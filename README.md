@@ -21,7 +21,7 @@ This tool only makes calls to the AWS DynamoDB and DynamoDB Streams APIs. It's e
 This tool is read-only except for temporarily enabling DynamoDB Streams on some tables. You will be informed if this is going to happen. AWS have confirmed that this operation is safe to do in production.
 
 ## Limitations
-While DynamoDB Streams are enabled, the provisioned write capacity of your table will be limited to 40,000 units in us-east-1 and 10,000 units in all other regions.  
+While DynamoDB Streams are enabled, the provisioned write capacity of your table will be limited to 40,000 units in us-east-1 and 10,000 units in all other regions. You can submit a request to AWS to increase these limits.  
 
 AWS may apply hidden API rate limiting if you automate this tool and run it too fast.
 
