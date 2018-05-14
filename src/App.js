@@ -199,7 +199,7 @@ class App extends Component {
           <br />
           { this.state.error ? (<div className="alert alert-danger" role="alert"><strong>Oops!</strong> {this.state.error}</div>) : null }
           <ProgressList tasks={this.state.tasks} />
-          { !!this.state.numberOfShards ? (<div className="alert alert-success" role="alert">{this.state.tableName} has <strong>{this.state.numberOfShards}</strong> shards.</div>) : null }
+          { !!this.state.numberOfShards ? (<div className="alert alert-success" role="alert">This table has <strong>{this.state.numberOfShards}</strong> partition(s)</div>) : null }
         </div>
       )
     }
