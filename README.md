@@ -4,7 +4,7 @@ This is a simple tool to determine number of [partitions](https://docs.aws.amazo
 
 ## Getting Started
 
-As this is a client-side tool, you can just use it via [https://dynamodb-table-partitions.github.io](https://dynamodb-table-partitions.github.io/)  
+As this is a client-side tool, you can just use it via [https://zaccharles.github.io/dynamodb-table-partitions](https://zaccharles.github.io/dynamodb-table-partitions)  
 
 Or, if you'd like to run the code locally, pull down this repository, run `npm install`, then `npm start`.
 
