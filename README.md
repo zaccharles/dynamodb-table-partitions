@@ -1,6 +1,6 @@
 # DynamoDB Table Partitions
 
-This is a simple tool to determine number of [partitions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.Partitions.html) in a DynamoDB table. It does so by looking at the number of shards in the table's [DynamoDB Stream](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html). If the table doesn't have its stream enabled, the tool will enable it temporarily and disable it after getting the number of shards.
+This is a simple tool to determine the number of [partitions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.Partitions.html) in a DynamoDB table. It does so by looking at the number of shards in the table's [DynamoDB Stream](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html). If the table doesn't have its stream enabled, the tool will enable it temporarily and disable it after getting the number of shards.
 
 ## Getting Started
 
