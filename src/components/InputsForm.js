@@ -62,7 +62,7 @@ export default class InputsForm extends Component {
             </div>
             <div className="form-group">
               <label htmlFor="secretAccessKey">Secret Access Key</label>
-              <input type="text" className={"form-control " + (!!this.props.errors.secretAccessKey ? "is-invalid" : "" )} id="secretAccessKey" onChange={this.handleChange} value={this.state.secretAccessKey} />
+              <input type="password" className={"form-control " + (!!this.props.errors.secretAccessKey ? "is-invalid" : "" )} id="secretAccessKey" onChange={this.handleChange} value={this.state.secretAccessKey} />
               <div className="invalid-feedback">{this.props.errors.secretAccessKey}</div>
             </div>
             <div className="form-group">
@@ -72,7 +72,7 @@ export default class InputsForm extends Component {
             </div>
             <button type="submit" className="btn btn-primary">Check</button>
             <small id="submitHelpBlock" className="form-text text-muted">
-              This is a read-only operation.
+              This is a read-only operation to validate your credentials and check the table exists.
             </small>
           </form>
         )

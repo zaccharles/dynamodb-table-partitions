@@ -3,6 +3,7 @@ const AWS = require('aws-sdk');
 export default class AwsApi {
     constructor(options) {
         options.sessionToken = options.sessionToken || null;
+        options.maxRetries = 2;
 
         this.dynamodb = new AWS.DynamoDB(options);
         this.dynamodbstreams = new AWS.DynamoDBStreams(options);
